@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <style>
+        html{
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        nav {
+            background-color: #e2e0ff9c;
+            background-size: 200% 200%;
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            width: 100%;
+            top: 0;
+            margin-left: -30px;
+            margin-right: -40px;
+            z-index: 1000;
+        }
+
+        .nav-profile {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            color: black;
+            margin-left: 30px;
+        }
+
+        .nav-profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: -40px;
+        }
+
+        .nav-profile .nav-name {
+            margin-left: 50px;
+        }
+
+        nav a {
+            color: black;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 1em;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffffff40;
+            border-radius: 5px;
+        }
+
+        nav a.active {
+            border-bottom: 2px solid #2a2adf;
+        }
+
+        .projects {
+            display: flex;
+            gap: 20px; /* Jarak antar proyek lebih besar */
+            justify-content: center;
+            padding-bottom: 50px;
+            padding-top: 25px; /* Ruang sekitar proyek lebih besar */
+            margin: 0 40px; /* Margin kiri dan kanan lebih besar */
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 5px; /* Sudut sedikit lebih halus */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.18); /* Shadow lebih menonjol */
+            overflow: hidden;
+            flex: 1;
+            max-width: 34%; /* Ukuran kartu lebih besar */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 175px; /* Tinggi gambar diperbesar */
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            background-color: #2a2adf;
+            color: #fff;
+            margin: 0;
+            padding: 18px; /* Padding lebih besar */
+            font-size: 1.4em; /* Ukuran font sedikit lebih besar */
+            text-align: center;
+        }
+
+        .project-card p {
+            padding: 18px; /* Padding deskripsi lebih besar */
+            color: #444;
+            font-size: 1.1em; /* Ukuran font lebih besar */
+            text-align: justify;
+        }
+
+        .project-card .description {
+            padding: 18px;
+            color: #333;
+            font-size: 1em; /* Ukuran font lebih besar */
+            line-height: 1.6; /* Jarak antar baris lebih longgar */
+            text-align: justify;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px); /* Hover efek sedikit lebih menonjol */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Bayangan saat hover lebih jelas */
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px;
+            background-color: #2a2adf;
+            color: white;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-card {
+                max-width: 90%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-profile">
+            <img src="/icon/mario.JPG" alt="Foto Profil">
+            <div class="nav-name">
+                <h2>Mario Saputra</h2>
+                <p>Web Desaigner</p>
+            </div>
+        </div>
+        <a href="/home/index.html">Beranda</a>
+        <a href="/tentang/tentang.html">Tentang Saya</a>
+        <a href="/portofolio/Portofolio.html" class="active">Portofolio</a>
+        <a href="/kontak/kontak.html">Kontak</a>
+    </nav>
+
+    <div class="projects">
+        <div class="project-card">
+            <img src="/icon/p1.jpeg" alt="Gambar Proyek 1">
+            <h3>Proyek 1</h3>
+            <p>Desain Web Responsif pemesanan hotel.</p>
+            <div class="description">Proyek ini mencakup pengembangan antarmuka pengguna yang adaptif dan ramah seluler untuk pemesanan hotel.</div>
+        </div>
+        <div class="project-card">
+            <img src="/icon/p2.jpeg" alt="Gambar Proyek 2">
+            <h3>Proyek 2</h3>
+            <p>Pembuatan web untuk M Hotel.</p>
+            <div class="description">Pembuatan web mulai dari daftar kamar hingga fitur pemesanan hotel secara online.</div>
+        </div>
+        <div class="project-card">
+            <img src="/icon/p3.jpeg" alt="Gambar Proyek 3">
+            <h3>Proyek 3</h3>
+            <p>Portofolio interaktif dengan HTML, CSS, dan JS.</p>
+            <div class="description">Proyek ini berfokus pada pembuatan portofolio personal dengan animasi dan efek visual modern.</div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Mario Saputra. | Semua Hak Dilindungi.
+    </footer>
+</body>
+</html>

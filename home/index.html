@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #f7f7f7, #eaeaea);
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: #e2e0ff9c;
+            background-size: 200% 200%;
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            width: 100%;
+            top: 0;
+            margin-left: -30px;
+            margin-right: -40px;
+            z-index: 1000;
+        }
+
+        .nav-profile {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            color: black;
+            margin-left: 30px;
+        }
+
+        .nav-profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: -40px;
+        }
+
+        .nav-profile .nav-name {
+            margin-left: 50px;
+        }
+
+        nav a {
+            color: black;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 1em;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffffff40;
+            border-radius: 5px;
+        }
+
+        nav a.active {
+            border-bottom: 2px solid #2a2adf;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-text {
+            flex: 1;
+            color: #333;
+            animation: fadeInLeft 1.5s ease-out;
+            margin-left: 60px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #333;
+        }
+
+        .hero-text h1 span {
+            color: #2a2adf;
+        }
+
+        .hero-text p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        .hero-text .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .hero-text .social-icons a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            overflow: hidden;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .hero-text .social-icons a img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-text .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInRight 1.5s ease-out;
+        }
+
+        .hero-image img {
+            width: 394px;
+            height: 394px;
+            border-radius: 1px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.1);
+        }
+
+        .additional-section {
+            padding: 30px;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .additional-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .additional-section p {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px;
+            background-color: #2a2adf;
+            color: white;
+            margin-top: 30px;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-profile">
+            <img src="/icon/mario.JPG" alt="Profile Picture">
+            <div class="nav-name">
+                <h2>Mario Saputra</h2>
+                <p>Web Desaigner</p>
+            </div>
+        </div>
+        <a href="/home/index.html" class="active">Beranda</a>
+        <a href="/tentang/tentang.html">Tentang Saya</a>
+        <a href="/portofolio/Portofolio.html">Portofolio</a>
+        <a href="/kontak/kontak.html">Kontak</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Desainer UI/UX <span>Yang Penuh Semangat</span></h1>
+            <p>Meningkatkan Pengalaman Pengguna dengan Desain UI/UX Kreatif.<br>
+            Saya adalah seorang desainer UX freelance yang berbasis di jawa barat, Indonesia.</p>            
+            <div class="social-icons">
+                <a href="https://www.facebook.com/marionandasaputra" target="_blank" title="Facebook"><img src="/icon/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.threads.net/@renseiya__gremory" target="_blank" title="threads"><img src="/icon/threads.svg" alt="threads"></a>
+                <a href="https://www.instagram.com/renseiya__gremory/" target="_blank" title="Instagram"><img src="/icon/instagram.svg" alt="Instagram"></a>
+                <a href="https://wa.me/62895408769030" target="_blank" title="LinkedIn"><img src="/icon/whatsapp.svg" alt="whatsapp"></a>
+                <a href="#" target="_blank" title="GitHub"><img src="/icon/github.svg" alt="GitHub"></a>
+                <a href="https://www.tiktok.com/@icegodsenpai" target="_blank" title="Tiktok"><img src="/icon/tiktok.svg" alt="Tiktok"></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/icon/mario3.png" alt="Profile">
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Mario Saputra. 
+    </footer>
+</body>
+</html>

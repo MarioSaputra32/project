@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengalaman</title>
+    <style>
+        .smooth-scroll {
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            box-sizing: border-box;
+        }
+
+        .container {
+            flex-grow: 1;
+            width: 95%; 
+            margin: 0; 
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #e2e0ff9c;
+            background-size: 200% 200%;
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            width: 100%;
+            top: 0;
+            margin-left: -30px;
+            margin-right: -40px;
+            z-index: 1000;
+        }
+
+        .nav-profile {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            color: black;
+            margin-left: 30px;
+        }
+
+        .nav-profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: -40px;
+        }
+
+        .nav-profile .nav-name {
+            margin-left: 50px;
+        }
+
+        nav a {
+            color: black;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 1em;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffffff40;
+            border-radius: 5px;
+        }
+
+        nav a.active {
+            border-bottom: 2px solid #2a2adf;
+        }
+
+        .section {
+            border-bottom: 1px solid black; 
+            padding: 15px 0; 
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1m; 
+        }
+
+        .section-icon {
+            color: #ffaa00;
+            margin-right: 10px; 
+            font-size: 1.8em;
+            width: 30px;
+            height: 30px;
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+        }
+
+        .section-content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 1s ease;
+            padding: 12px 0;
+        }
+
+        .section.open + .section-content {
+            max-height: 500px;
+        }
+
+        .section.open .section-title {
+            font-weight: bold;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 18px;
+            background-color: #2a2adf;
+            color: white;
+            margin-top: 30px;
+        }
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".section");
+
+            sections.forEach(section => {
+                section.addEventListener("click", () => {
+                    sections.forEach(sec => {
+                        if (sec !== section) {
+                            sec.classList.remove("open");
+                            sec.nextElementSibling.style.maxHeight = "0";
+                        }
+                    });
+
+                    const content = section.nextElementSibling;
+                    if (section.classList.contains("open")) {
+                        content.style.maxHeight = "0";
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                    section.classList.toggle("open");
+                });
+            });
+        });
+    </script>
+</head>
+<body class="smooth-scroll">
+    <nav>
+        <div class="nav-profile">
+            <img src="/icon/mario.JPG" alt="Profile Picture">
+            <div class="nav-name">
+                <h2>Mario Saputra</h2>
+                <p>Web Desaigner</p>
+            </div>
+        </div>
+        <a href="/home/index.html">Beranda</a>
+        <a href="/tentang/tentang.html" class="active">Tentang Saya</a>
+        <a href="/portofolio/Portofolio.html">Portofolio</a>
+        <a href="/kontak/kontak.html">Kontak</a>
+    </nav>
+
+    <div class="container">
+        <div class="section">
+            <div>
+                <span class="section-icon">🎓</span>
+                <span class="section-title">Pendidikan</span>
+            </div>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li>Sarjana Teknik Informatika - Universitas Kuningan (2023 - Sekarang )</li>
+                <li>SMA Negeri 1 Cigugur - Jurusan IPA (2020 - 2023)</li>
+                <li>SMP Negeri 7 Kuningan - Tahun 2017 - 2020</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div>
+                <span class="section-icon">💼</span>
+                <span class="section-title">Pekerjaan</span>
+            </div>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li>Web Developer di PT Indome (2023- Sekarang)</li>
+                <li>Junior Programmer di Start-Up  (2021-2022)</li>
+                <li>Freelance Frontend Developer (2019-2020)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div>
+                <span class="section-icon">👥</span>
+                <span class="section-title">Organisasi</span>
+            </div>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li>Ketua Himpunan Mahasiswa Teknik Informatika (2024-2025)</li>
+                <li>Anggota Komunitas Developer React Indoesia (2023-Sekarang)</li>
+                <li>Volunteer di Gerakan Pemuda Digital (2022)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div>
+                <span class="section-icon">📖</span>
+                <span class="section-title">Pendidikan Nonformal</span>
+            </div>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li>Bootcamp Fullstack Developer - Rung Guru (2021)</li>
+                <li>Pelatihan UI/UX Design - Lembaga BUMN (2020)</li>
+                <li>Workshop Machine Learning - Universitas UI (2022)</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Mario Saputra.
+    </footer>
+</body>
+</html>
